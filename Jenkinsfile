@@ -4,7 +4,7 @@ node {
     checkout scm
   }
   stage('Build image') {
-    app = docker.build("fedoralepceska/jenkins_ex")
+    app = docker.build("flepceska/jenkins_ex")
   }
   stage('Push image') {   
     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
